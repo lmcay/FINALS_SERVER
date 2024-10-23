@@ -22,7 +22,7 @@
                 :src="require(`@/assets/images/machines/${machine.image}`)"
                 alt="Machine Image"
               />
-              <h3>{{ machine.name }}</h3>
+              <h3 class="mt-s">{{ machine.name }}</h3>
             </div>
 
             <p>{{ machine.description }}</p>

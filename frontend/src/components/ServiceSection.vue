@@ -28,7 +28,7 @@
             :src="require(`@/assets/images/services/${service.image}`)"
             alt="Service Image"
           />
-          <h3>{{ service.name }}</h3>
+          <h3 class="mt-s">{{ service.name }}</h3>
         </div>
 
         <div>
