@@ -15,7 +15,10 @@ app.use(cors()); // This will allow all origins
 
 // Connect to MongoDB
 mongoose
-  .connect("", { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(
+    "mongodb+srv://lmctest1:l7s1bP7u04qgX6Rx@cluster0.u4pev.mongodb.net/medTechDB?retryWrites=true&w=majority",
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
   .then(() => {
     console.log("MongoDB Atlas connected");
   })

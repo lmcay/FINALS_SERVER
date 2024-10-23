@@ -7,6 +7,19 @@ router.get("/", async (req, res) => {
   res.json(machines);
 });
 
+// GET a single partner by ID
+router.get("/:id", async (req, res) => {
+  try {
+    const machine = await Machine.findById(req.params.id);
+    if (!machine) {
+      return res.status(404).json({ message: "Machine not found" });
+    }
+    res.json(machine);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch machine" });
+  }
+});
+
 router.post("/", async (req, res) => {
   const newMachine = new Machine(req.body);
   const savedMachine = await newMachine.save();

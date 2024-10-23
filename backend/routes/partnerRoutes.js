@@ -12,6 +12,19 @@ router.get("/", async (req, res) => {
   }
 });
 
+// GET a single partner by ID
+router.get("/:id", async (req, res) => {
+  try {
+    const partner = await Partner.findById(req.params.id);
+    if (!partner) {
+      return res.status(404).json({ message: "Partner not found" });
+    }
+    res.json(partner);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch partner" });
+  }
+});
+
 // POST a new partner
 router.post("/", async (req, res) => {
   const newPartner = new Partner(req.body);

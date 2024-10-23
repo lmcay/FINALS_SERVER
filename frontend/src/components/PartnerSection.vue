@@ -1,17 +1,28 @@
 <template>
-  <div class="partner-section">
-    <h2>Our Partners</h2>
+  <div class="fetched-data-section">
+    <h2 class="center">Meet Our Partners in Tech</h2>
+    <p class="center mt-s large mb-l">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maxime
+      at delectus cumque atque.
+    </p>
     <div v-if="loading">Loading...</div>
-    <ul v-if="partners.length">
-      <li v-for="partner in partners" :key="partner._id">
-        <h3>{{ partner.name }}</h3>
+    <div v-if="partners.length" class="fetched-data-grid">
+      <div
+        class="fetched-data-box"
+        v-for="partner in partners"
+        :key="partner._id"
+      >
+        <div>
+          <img
+            :src="require(`@/assets/images/partners/${partner.image}`)"
+            alt="Partners Image"
+          />
+          <h3 class="mt-s">{{ partner.name }}</h3>
+        </div>
+
         <p>{{ partner.description }}</p>
-        <img
-          :src="require(`@/assets/images/partners/${partner.image}`)"
-          alt="Partners Image"
-        />
-      </li>
-    </ul>
+      </div>
+    </div>
     <div v-else>No partners found.</div>
   </div>
 </template>
@@ -40,11 +51,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.partner-section img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  object-position: center;
-}
-</style>
+<style scoped></style>

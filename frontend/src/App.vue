@@ -122,6 +122,10 @@ h4 {
   margin-top: 10px;
 }
 
+.mt-l {
+  margin-top: 25px;
+}
+
 .center {
   text-align: center;
 }
@@ -145,6 +149,7 @@ h4 {
 
 .aqua {
   color: var(--secondary-color);
+  font-weight: bold;
 }
 
 /* Box Container */
@@ -177,5 +182,47 @@ h4 {
   font-size: large;
   margin-top: 1rem;
   margin-bottom: 3rem;
+}
+
+/* Fetched Data */
+.fetched-data-section {
+  width: 80%;
+  margin: 4rem auto 0;
+}
+
+.search-input {
+  width: 70%;
+  padding: 1rem 2rem;
+  margin-bottom: 20px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 25px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.fetched-data-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.fetched-data-box {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.fetched-data-section img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border: solid 2px var(--secondary-color);
+  border-radius: 10px;
 }
 </style>

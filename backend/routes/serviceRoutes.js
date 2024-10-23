@@ -7,6 +7,19 @@ router.get("/", async (req, res) => {
   res.json(services);
 });
 
+// GET a single service by ID
+router.get("/:id", async (req, res) => {
+  try {
+    const service = await Service.findById(req.params.id);
+    if (!service) {
+      return res.status(404).json({ message: "Service not found" });
+    }
+    res.json(service);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch service" });
+  }
+});
+
 router.post("/", async (req, res) => {
   const newService = new Service(req.body);
   const savedService = await newService.save();

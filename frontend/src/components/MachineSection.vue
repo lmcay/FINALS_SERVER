@@ -1,21 +1,33 @@
 <!-- src/components/MachineSection.vue -->
 <template>
-  <div class="machine-section">
+  <div class="fetched-data-section">
     <h2>Our Machines</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     <div v-if="loading">Loading...</div>
     <div v-if="machines.length">
-      <div v-for="(machineGroup, category) in groupedMachines" :key="category">
-        <h3>{{ category }}</h3>
-        <ul>
-          <li v-for="machine in machineGroup" :key="machine._id">
-            <h4>{{ machine.name }}</h4>
+      <div
+        v-for="(machineGroup, category) in groupedMachines"
+        :key="category"
+        class="mt-l"
+      >
+        <h3 class="">{{ category }}</h3>
+        <div class="fetched-data-grid">
+          <div
+            v-for="machine in machineGroup"
+            :key="machine._id"
+            class="fetched-data-box"
+          >
+            <div>
+              <img
+                :src="require(`@/assets/images/machines/${machine.image}`)"
+                alt="Machine Image"
+              />
+              <h3>{{ machine.name }}</h3>
+            </div>
+
             <p>{{ machine.description }}</p>
-            <img
-              :src="require(`@/assets/images/machines/${machine.image}`)"
-              alt="Machine Image"
-            />
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div v-else>No machines found.</div>
@@ -59,24 +71,4 @@ export default {
 };
 </script>
 
-<style scoped>
-/* Add your styles here */
-.machine-section {
-  margin: 20px 0;
-}
-.machine-section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.machine-section h3 {
-  font-size: 20px;
-  margin-top: 20px;
-}
-.machine-section h4 {
-  font-size: 18px;
-}
-.machine-section img {
-  max-width: 100px; /* Adjust as necessary */
-  height: auto;
-}
-</style>
+<style scoped></style>
