@@ -17,23 +17,32 @@
     </p>
 
     <div v-if="loading">Loading...</div>
-    <div v-if="filteredServices.length" class="fetched-data-grid">
+    <div v-if="Object.keys(groupedServices).length">
       <div
-        v-for="service in filteredServices"
-        :key="service._id"
-        class="fetched-data-box"
+        v-for="(serviceGroup, category) in groupedServices"
+        :key="category"
+        class="mt-l"
       >
-        <div>
-          <img
-            :src="require(`@/assets/images/services/${service.image}`)"
-            alt="Service Image"
-          />
-          <h3 class="mt-s">{{ service.name }}</h3>
-        </div>
+        <h3>{{ category }}</h3>
+        <div class="fetched-data-grid">
+          <div
+            v-for="service in serviceGroup"
+            :key="service._id"
+            class="fetched-data-box"
+          >
+            <div>
+              <img
+                :src="require(`@/assets/images/services/${service.image}`)"
+                alt="Service Image"
+              />
+              <h3 class="mt-s">{{ service.name }}</h3>
+            </div>
 
-        <div>
-          <p>{{ service.description }}</p>
-          <p class="aqua right mt-s">Php {{ service.price }}</p>
+            <div>
+              <p>{{ service.description }}</p>
+              <p class="aqua right mt-s">Php {{ service.price }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -48,31 +57,42 @@ export default {
   data() {
     return {
       services: [],
-      filteredServices: [],
       loading: true,
       searchQuery: "",
     };
   },
-  async created() {
-    try {
-      const response = await axios.get("http://localhost:3002/api/services");
-      this.services = response.data;
-      this.filteredServices = this.services;
-    } catch (error) {
-      console.error("Error fetching services:", error);
-    } finally {
-      this.loading = false;
-    }
-  },
-  methods: {
-    filterServices() {
+  computed: {
+    filteredServices() {
+      if (!this.searchQuery) {
+        return this.services;
+      }
       const query = this.searchQuery.toLowerCase();
-      this.filteredServices = this.services.filter(
+      return this.services.filter(
         (service) =>
           service.name.toLowerCase().includes(query) ||
           service.description.toLowerCase().includes(query)
       );
     },
+    groupedServices() {
+      return this.filteredServices.reduce((groups, service) => {
+        const category = service.category;
+        if (!groups[category]) {
+          groups[category] = [];
+        }
+        groups[category].push(service);
+        return groups;
+      }, {});
+    },
+  },
+  async created() {
+    try {
+      const response = await axios.get("http://localhost:3002/api/services");
+      this.services = response.data;
+    } catch (error) {
+      console.error("Error fetching services:", error);
+    } finally {
+      this.loading = false;
+    }
   },
 };
 </script>

@@ -2,7 +2,6 @@
   <div id="app">
     <NavBar />
     <router-view />
-    <!-- This is where your routed components will be rendered -->
     <callAction />
     <AppFooter />
   </div>
@@ -64,7 +63,8 @@ body {
   letter-spacing: 1px;
 }
 
-.button-outline:hover {
+.button-outline:hover,
+.button-delete:hover {
   background-color: var(--secondary-color);
   color: white;
 }
@@ -108,6 +108,10 @@ h3 {
 
 h4 {
   font-size: 16px;
+}
+
+button {
+  cursor: pointer;
 }
 
 .mb-s {
@@ -185,6 +189,7 @@ h4 {
 }
 
 /* Fetched Data */
+
 .fetched-data-section {
   width: 80%;
   margin: 4rem auto 0;
@@ -224,5 +229,64 @@ h4 {
   object-position: center;
   border: solid 2px var(--secondary-color);
   border-radius: 10px;
+}
+
+/* CRUD SECTION */
+
+.crud-section {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10rem;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  border: solid 2px var(--secondary-color);
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+}
+
+.crud-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.button-edit,
+.button-delete {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: solid 1px var(--secondary-color);
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.button-edit {
+  margin-right: 5px;
+  background-color: var(--secondary-color);
+  color: white;
 }
 </style>

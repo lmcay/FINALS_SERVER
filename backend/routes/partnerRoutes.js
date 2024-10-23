@@ -1,6 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const Partner = require("../models/partnerModel");
+const multer = require("multer");
+
+// Configure multer for file uploads
+const storage = multer.memoryStorage(); // Use memory storage to handle file uploads in memory
+const upload = multer({ storage: storage });
 
 // GET all partners
 router.get("/", async (req, res) => {
@@ -25,9 +30,14 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// POST a new partner
-router.post("/", async (req, res) => {
-  const newPartner = new Partner(req.body);
+// POST a new partner with image upload
+router.post("/", upload.single("image"), async (req, res) => {
+  const newPartner = new Partner({
+    name: req.body.name,
+    description: req.body.description,
+    image: req.file ? req.file.originalname : null,
+  });
+
   try {
     const savedPartner = await newPartner.save();
     res.status(201).json(savedPartner);
@@ -36,12 +46,21 @@ router.post("/", async (req, res) => {
   }
 });
 
-// PUT (update) a partner
-router.put("/:id", async (req, res) => {
+// PUT (update) a partner by ID
+router.put("/:id", upload.single("image"), async (req, res) => {
+  const updatedData = {
+    name: req.body.name,
+    description: req.body.description,
+  };
+
+  if (req.file) {
+    updatedData.image = req.file.originalname;
+  }
+
   try {
     const updatedPartner = await Partner.findByIdAndUpdate(
       req.params.id,
-      req.body,
+      updatedData,
       { new: true }
     );
     if (!updatedPartner) {
@@ -56,7 +75,10 @@ router.put("/:id", async (req, res) => {
 // DELETE a partner
 router.delete("/:id", async (req, res) => {
   try {
-    await Partner.findByIdAndDelete(req.params.id);
+    const deletedPartner = await Partner.findByIdAndDelete(req.params.id);
+    if (!deletedPartner) {
+      return res.status(404).json({ message: "Partner not found" });
+    }
     res.status(204).send();
   } catch (error) {
     res.status(500).json({ error: "Failed to delete partner" });

@@ -1,4 +1,3 @@
-<!-- src/components/MachineSection.vue -->
 <template>
   <div class="fetched-data-section">
     <h2>Our Machines</h2>
@@ -46,7 +45,6 @@ export default {
   },
   computed: {
     groupedMachines() {
-      // Group machines by category
       return this.machines.reduce((groups, machine) => {
         const category = machine.category;
         if (!groups[category]) {
@@ -59,9 +57,9 @@ export default {
   },
   async created() {
     try {
-      const response = await axios.get("http://localhost:3002/api/machines"); // Adjust the endpoint as needed
-      console.log("Response data:", response.data); // Debugging line
-      this.machines = response.data; // Adjust if needed based on response structure
+      const response = await axios.get("http://localhost:3002/api/machines");
+      // console.log("Response data:", response.data); For Debugging
+      this.machines = response.data;
     } catch (error) {
       console.error("Error fetching machines:", error);
     } finally {

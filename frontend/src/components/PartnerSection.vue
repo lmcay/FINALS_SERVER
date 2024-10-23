@@ -40,8 +40,8 @@ export default {
   async created() {
     try {
       const response = await axios.get("http://localhost:3002/api/partners");
-      console.log("Response data:", response.data); // Debugging line
-      this.partners = response.data; // Adjust if needed based on response structure
+      // console.log("Response data:", response.data); For Debugging
+      this.partners = response.data;
     } catch (error) {
       console.error("Error fetching partners:", error);
     } finally {
