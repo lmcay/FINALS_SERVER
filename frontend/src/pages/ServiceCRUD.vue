@@ -47,7 +47,7 @@
           <td>{{ service.price }}</td>
           <td>
             <img
-              :src="require(`@/assets/images/services/${services.image}`)"
+              :src="require(`@/assets/images/services/${service.image}`)"
               :alt="`${service.image}`"
               class="crud-image"
             />

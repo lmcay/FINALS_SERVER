@@ -2,11 +2,13 @@
   <div class="cta-section center">
     <h2>Where Every Test Reflects Our Commitment to Your Well-Being.</h2>
     <p class="mt-s lh-m large mb-l">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-      incidunt autem eveniet soluta. Porro blanditiis dolor similique nisi
-      impedit quae a optio velit ullam, quas at vero, fuga labore illo?
+      Trust Diaserv to provide accurate diagnostics, compassionate care, and the
+      results you need to take charge of your health.
     </p>
-    <button class="button-solid">Connect With Us</button>
+
+    <router-link to="/contact"
+      ><button class="button-solid">Connect With Us</button></router-link
+    >
   </div>
 </template>
 

@@ -2,8 +2,8 @@
   <div class="fetched-data-section">
     <h2 class="center">Find The Service You're Looking For!</h2>
     <p class="center mt-s large mb-l">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maxime
-      at delectus cumque atque.
+      Explore Our Comprehensive Range of Diagnostic Tests to Support Your Health
+      Needs.
     </p>
 
     <p class="center">

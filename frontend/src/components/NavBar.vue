@@ -20,7 +20,9 @@
       </ul>
     </nav>
     <div>
-      <button class="button-outline">Contact</button>
+      <router-link to="/contact"
+        ><button class="button-outline">Contact</button></router-link
+      >
     </div>
   </div>
 </template>

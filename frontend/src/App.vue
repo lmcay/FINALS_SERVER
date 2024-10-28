@@ -44,6 +44,10 @@ body {
   background-color: var(--primary-color);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Style Components */
 
 .large {

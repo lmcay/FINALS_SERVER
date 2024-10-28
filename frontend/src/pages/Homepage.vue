@@ -4,12 +4,12 @@
       <div class="box-section-left">
         <h1>Detailed Diagnostic of Your Body</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
-          sunt corrupti magnam debitis enim repellat quaerat minus iusto
-          exercitationem, nam a officiis mollitia, alias voluptatibus laudantium
-          dolores nesciunt repellendus consequuntur.
+          Empowering healthcare with precise, timely diagnostics tailored to
+          your unique needs. At Diaserv, we bring advanced technology and
+          compassionate care together to provide results you can
+          trust—supporting every step of your health journey.
         </p>
-        <button class="button-solid">Learn More</button>
+        <a href="#about"><button class="button-solid">Learn More</button></a>
       </div>
       <div class="box-section-right">
         <img
@@ -23,33 +23,39 @@
     <div class="services-section">
       <h2 class="center">Services we offer</h2>
       <p class="center mt-s large mb-l">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maxime
-        at delectus cumque atque.
+        Comprehensive testing services designed to support your health journey
+        with accuracy and care.
       </p>
       <div class="services-container">
         <div class="services-box">
-          <img src="../assets/images/homepage/service-2.png" alt="" />
-          <h3>Blood Test</h3>
+          <img src="../assets/images/homepage/service-1.png" alt="" />
+          <h3>Blood Chemistry</h3>
           <p class="center mb-s">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Analyzes blood to assess organ health, including liver and kidneys.
           </p>
-          <button class="button-solid">Learn More</button>
+          <router-link to="/services"
+            ><button class="button-solid">Learn More</button></router-link
+          >
         </div>
         <div class="services-box">
           <img src="../assets/images/homepage/service-2.png" alt="" />
-          <h3>Blood Test</h3>
+          <h3>Hematology</h3>
           <p class="center mb-s">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Tests blood cells for conditions like anemia and infections.
           </p>
-          <button class="button-solid">Learn More</button>
+          <router-link to="/services"
+            ><button class="button-solid">Learn More</button></router-link
+          >
         </div>
         <div class="services-box">
-          <img src="../assets/images/homepage/service-2.png" alt="" />
-          <h3>Blood Test</h3>
+          <img src="../assets/images/homepage/service-3.png" alt="" />
+          <h3>Urinalysis</h3>
           <p class="center mb-s">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Detects kidney function, hydration, and possible infections.
           </p>
-          <button class="button-solid">Learn More</button>
+          <router-link to="/services"
+            ><button class="button-solid">Learn More</button></router-link
+          >
         </div>
       </div>
     </div>
@@ -62,54 +68,56 @@
           class="box-img"
         />
       </div>
-      <div class="box-section-left">
-        <h1>Detailed Diagnostic of Your Body</h1>
+      <div class="box-section-left" id="about">
+        <h1>Your Trusted Partner in Health for Over 24 Years</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
-          sunt corrupti magnam debitis enim repellat quaerat minus iusto
-          exercitationem, nam a officiis mollitia, alias voluptatibus laudantium
-          dolores nesciunt repellendus consequuntur.
+          Since 2000, Diaserv Diagnostic Laboratory has been dedicated to
+          providing high-quality diagnostic services to the San Fernando
+          community. Our team is committed to ensuring that every test is
+          accurate, timely, and meaningful, supporting healthcare providers and
+          empowering patients with reliable insights into their health.
         </p>
-        <button class="button-solid">Learn More</button>
+        <router-link to="/about"
+          ><button class="button-solid">Learn More</button></router-link
+        >
       </div>
     </div>
 
     <div class="client-section">
       <h2 class="center">Our Clients Around Pampanga</h2>
       <p class="center mt-s large mb-l">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maxime
-        at delectus cumque atque.
+        Trusted by healthcare providers and patients across Pampanga.
       </p>
       <div class="client-grid">
         <div class="client-box">
-          <img src="../assets/images/homepage/partner-1.png" alt="" />
+          <img src="../assets/images/homepage/p1.webp" alt="partner-img" />
         </div>
         <div class="client-box span-2">
-          <img src="../assets/images/homepage/partner-1.png" alt="" />
+          <img src="../assets/images/homepage/p2.webp" alt="partner-img" />
         </div>
         <div class="client-box span-2">
-          <img src="../assets/images/homepage/partner-1.png" alt="" />
+          <img src="../assets/images/homepage/p3.webp" alt="partner-img" />
         </div>
         <div class="client-box">
-          <img src="../assets/images/homepage/partner-1.png" alt="" />
+          <img src="../assets/images/homepage/p4.webp" alt="partner-img" />
         </div>
         <div class="client-box">
-          <img src="../assets/images/homepage/partner-1.png" alt="" />
+          <img src="../assets/images/homepage/p5.webp" alt="partner-img" />
         </div>
         <div class="client-box">
-          <img src="../assets/images/homepage/partner-1.png" alt="" />
+          <img src="../assets/images/homepage/p6.webp" alt="partner-img" />
         </div>
         <div class="client-box">
-          <img src="../assets/images/homepage/partner-1.png" alt="" />
+          <img src="../assets/images/homepage/p7.webp" alt="partner-img" />
         </div>
         <div class="client-box span-2">
-          <img src="../assets/images/homepage/partner-1.png" alt="" />
+          <img src="../assets/images/homepage/p8.webp" alt="partner-img" />
         </div>
         <div class="client-box">
-          <img src="../assets/images/homepage/partner-1.png" alt="" />
+          <img src="../assets/images/homepage/p9.webp" alt="partner-img" />
         </div>
         <div class="client-box span-2">
-          <img src="../assets/images/homepage/partner-1.png" alt="" />
+          <img src="../assets/images/homepage/p10.webp" alt="partner-img" />
         </div>
       </div>
     </div>
@@ -118,39 +126,34 @@
       <div class="review-box">
         <h2>What our client says about us</h2>
         <p class="lh-m mt-s">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo numquam,
-          eos, officiis, odit totam accusantium quod obcaecati dolorem
-          voluptatem quam sit vel deleniti ducimus expedita debitis unde
-          praesentium? Perspiciatis, porro.
+          Hear from our valued clients about their experiences with Diaserv
+          Diagnostic Laboratory and the impact our services have had on their
+          health journeys.
         </p>
       </div>
       <div class="review-box review">
         <p class="review-p">
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-          autem officiis reiciendis iusto adipisci expedita nisi consectetur,
-          dolores cumque ipsa mollitia unde aut odio culpa, maiores quas ut
-          veritatis. Dolore!"
+          "The staff was friendly and professional, and my test results came in
+          much sooner than expected."
         </p>
         <div class="review-bottom">
-          <img src="../assets/images/homepage/service-2.png" alt="" />
+          <img src="../assets/images/homepage/person-1.webp" alt="" />
           <div class="review-name">
-            <h4>Person name</h4>
-            <p class="sub">Random Text Here</p>
+            <h4>Maria Santos</h4>
+            <p class="sub">Teacher</p>
           </div>
         </div>
       </div>
       <div class="review-box review">
         <p class="review-p">
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-          autem officiis reiciendis iusto adipisci expedita nisi consectetur,
-          dolores cumque ipsa mollitia unde aut odio culpa, maiores quas ut
-          veritatis. Dolore!"
+          "Diaserv has been instrumental in my health journey, providing
+          reliable results that help me stay on top of my condition."
         </p>
         <div class="review-bottom">
-          <img src="../assets/images/homepage/service-2.png" alt="" />
+          <img src="../assets/images/homepage/person-2.webp" alt="" />
           <div class="review-name">
-            <h4>Person name</h4>
-            <p class="sub">Random Text Here</p>
+            <h4>Carlos Dela Cruz</h4>
+            <p class="sub">Diabetes Patient</p>
           </div>
         </div>
       </div>
@@ -211,6 +214,7 @@ export default {
 
 .client-box img {
   max-height: 150px;
+  border-radius: 100px;
 }
 
 .review-section {
@@ -220,6 +224,12 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+
+.review-section img {
+  border-radius: 50px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .review {

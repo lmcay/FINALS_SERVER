@@ -9,16 +9,18 @@
         />
       </div>
       <div class="box-section-left">
-        <h1>Detailed Diagnostic of Your Body</h1>
+        <h1>Comprehensive Diagnostic Services Tailored for You</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
-          sunt corrupti magnam debitis enim repellat quaerat minus iusto
-          exercitationem, nam a officiis mollitia, alias voluptatibus laudantium
-          dolores nesciunt repellendus consequuntur.<br /><br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
-          sunt corrupti magnam debitis enim repellat quaerat minus iusto
-          exercitationem, nam a officiis mollitia, alias voluptatibus laudantium
-          dolores nesciunt repellendus consequuntur.
+          At Diaserv Diagnostic Laboratory, we provide a wide range of
+          diagnostic tests to meet the needs of patients and healthcare
+          providers. Our services include blood chemistry, hematology,
+          urinalysis, and advanced imaging like X-rays and ultrasounds, all
+          performed with precision for accurate and timely results.<br /><br />
+          We uphold the highest quality standards, with a dedicated team of
+          medical technologists and radiologic technologists ensuring reliable
+          diagnostics and personalized care. At Diaserv, we are committed to
+          supporting your health and well-being through our comprehensive
+          offerings.
         </p>
       </div>
     </div>

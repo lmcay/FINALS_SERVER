@@ -2,8 +2,7 @@
   <div class="fetched-data-section">
     <h2 class="center">Meet Our Partners in Tech</h2>
     <p class="center mt-s large mb-l">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maxime
-      at delectus cumque atque.
+      Discover the advanced technology that powers our diagnostic services.
     </p>
     <div v-if="loading">Loading...</div>
     <div v-if="partners.length" class="fetched-data-grid">

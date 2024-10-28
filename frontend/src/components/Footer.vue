@@ -2,12 +2,12 @@
   <footer>
     <div class="footer-top">
       <div class="footer-left">
-        <h2>Random text here</h2>
+        <h2>Diaserv - Your Partner in Precision Health</h2>
         <p class="lh-m mt-s">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
-          blanditiis culpa eos suscipit error impedit earum enim similique vitae
-          omnis illo, rem, corrupti eius totam sunt numquam unde aut
-          accusantium!
+          With a commitment to excellence and a focus on patient care, we
+          provide advanced diagnostic services that support informed health
+          decisions, ensuring that every individual receives the quality care
+          they deserve.
         </p>
       </div>
       <div>
@@ -28,10 +28,34 @@
       <div>
         <ul>
           <li class="aqua">Socials</li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Facebook</a></li>
+          <li>
+            <a
+              href="https://www.facebook.com/DiaservDiagnosticLab/"
+              target="_blank"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/explore/locations/983142501/diaserv-diagnostic-laboratory/"
+              target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://healthcarephilippines.com/directory/diaserv-diagnostic-laboratory/"
+              target="_blank"
+              >Healthcare</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.infobel.com/en/philippines/diaserv_diagnostic_laboratory/san_fernando_city/PH100401852/businessdetails.aspx"
+              target="_blank"
+              >Infobel</a
+            >
+          </li>
         </ul>
       </div>
     </div>

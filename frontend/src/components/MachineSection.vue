@@ -1,7 +1,9 @@
 <template>
   <div class="fetched-data-section">
     <h2>Our Machines</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="mt-s large mb-l">
+      State-of-the-art equipment for precise and reliable results.
+    </p>
     <div v-if="loading">Loading...</div>
     <div v-if="machines.length">
       <div
